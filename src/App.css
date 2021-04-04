@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('./images/to-do-background.jpg')
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 630px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 30px;
+  /* background-color:rgb(147, 38, 190); */
+  background-color:rgb(216, 202, 126);
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 555px;
+}
+
+.input-wrapper input {
+  color: rgb(0, 0, 0);
+  width: 440px;
+  padding: 10px;
+  height: 45px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(216, 202, 126);
+  border: 1px solid rgb(0, 0, 0);
+}
+.input-wrapper input::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.input-wrapper button {
+  border: 1px solid rgb(255, 255, 255);
+  height: 45px;
+  width: 95px;
+  margin-bottom: 10px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 19px;
+  margin-right: 10px;
+  font-family: 'Dancing Script', cursive;
+}
+.input-wrapper button:hover {
+  cursor: pointer;
+}
+
+.item {
+  border: 1px solid rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 550px;
+  margin: 10px;
+  padding: 7px 20px 7px 25px;
+  background-color: rgb(0, 0, 0);
+  font-family: 'Dancing Script', cursive;
+}
+
+.item p {
+  margin: 0;
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+}
+
+.delete-button {
+  color: rgb(245, 126, 126);
+  height: 40px;
+  width: 40px;
+}
+.delete-button:hover {
+  cursor: pointer;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  font-size: 45px;
+  margin-bottom: 30px;
+  font-family: 'Dancing Script', cursive;
+}
