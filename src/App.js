@@ -1,47 +1,31 @@
 import React, { useState } from 'react';
 import './App.css';
-import List from './List';
+// Import Components
+import List from './components/List';
+import Input from './components/Input';
 
 function App() {
   const [currentItem, setCurrentItem] = useState('')
   const [itemList, updateItemList] = useState([])
 
-  const idForObj = () => {
-    return Math.floor(Math.random() * 100000);
-  }
-
-  const onChangeHandler = (e) => {
-    setCurrentItem(e.target.value);
-  }
+  const idForObj = () => (Math.floor(Math.random() * 100000))
 
   const addItemToList = () => {
-    updateItemList([...itemList, { item: currentItem, key: idForObj() }]);
-    setCurrentItem('');
-    console.log('list items', itemList);
+    updateItemList([...itemList, { item: currentItem, key: idForObj() }])
+    setCurrentItem('')
   }
 
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
-      return addItemToList()
-    }
-  }
+  const handleKeyDown = e => (e.key === 'Enter' ? addItemToList() : null)
 
   return (
     <div className="App">
 
       <div className="wrapper">
-        <h1>To Do List</h1>
-        <div className="input-wrapper">
-          <input
-            type='text'
-            value={currentItem}
-            onChange={onChangeHandler}
-            placeholder="Add item"
-            onKeyDown={handleKeyDown} />
-
-          <button onClick={addItemToList}>Add</button>
-        </div>
-
+        <Input 
+          currentItem={currentItem} 
+          addItemToList={addItemToList} 
+          handleKeyDown={handleKeyDown} updateCurrentItem={setCurrentItem} />
+        
         <List itemList={itemList} updateItemList={updateItemList} />
       </div>
 
