@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +11,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-image: url('./images/to-do-background.jpg')
+  background-image: url('./images/to-do-background.jpg');
+  font-family: 'New Tegomin', serif;
 }
 
 .wrapper {
@@ -53,7 +56,6 @@
   color: rgb(255, 255, 255);
   font-size: 19px;
   margin-right: 10px;
-  font-family: 'Dancing Script', cursive;
 }
 .input-wrapper button:hover {
   cursor: pointer;
@@ -68,7 +70,6 @@
   margin: 10px;
   padding: 7px 20px 7px 25px;
   background-color: rgb(0, 0, 0);
-  font-family: 'Dancing Script', cursive;
 }
 .item p {
   margin: 0;
@@ -91,5 +92,4 @@ h1 {
   color: rgb(0, 0, 0);
   font-size: 45px;
   margin-bottom: 30px;
-  font-family: 'Dancing Script', cursive;
 }
