@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 // Import Components
 import List from './components/List';
@@ -6,7 +6,13 @@ import Input from './components/Input';
 
 function App() {
   const [currentItem, setCurrentItem] = useState('')
-  const [itemList, updateItemList] = useState([])
+  const [itemList, updateItemList] = useState(
+    localStorage.itemList ? JSON.parse(localStorage.itemList) : []
+  )
+
+  useEffect(() => {
+    localStorage.setItem('itemList', JSON.stringify(itemList))
+  }, [itemList])
 
   const idForObj = () => (Math.floor(Math.random() * 100000))
 
