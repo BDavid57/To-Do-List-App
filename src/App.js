@@ -5,6 +5,8 @@ import List from './components/List';
 import Input from './components/Input';
 
 function App() {
+  const [currentDate, setCurrentDate] = useState('')
+  const [currentTime, setCurrentTime] = useState('')
   const [currentItem, setCurrentItem] = useState('')
   const [itemList, updateItemList] = useState(
     localStorage.itemList ? JSON.parse(localStorage.itemList) : []
@@ -24,7 +26,11 @@ function App() {
             currentItem={currentItem}
             updateCurrentItem={setCurrentItem}
             itemList={itemList}
-            updateItemList={updateItemList} />
+            updateItemList={updateItemList}
+            currentDate={currentDate}
+            setCurrentDate={setCurrentDate}
+            currentTime={currentTime}
+            setCurrentTime={setCurrentTime} />
 
           <List itemList={itemList} updateItemList={updateItemList} />
         </div>
